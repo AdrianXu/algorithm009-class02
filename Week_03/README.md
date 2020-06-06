@@ -6,7 +6,7 @@
     通过函数体来进行循环（计算机汇编反复跳到之前的指令执行）：
     向下进入，向上又回到原来一层；
     java递归代码模版
->   // Java
+>   # Java
     public void recur(int level, int param) { 
       // terminator 递归终结条件
       if (level > MAX_LEVEL) { 
