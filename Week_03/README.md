@@ -6,7 +6,7 @@
     通过函数体来进行循环（计算机汇编反复跳到之前的指令执行）：
     向下进入，向上又回到原来一层；
     java递归代码模版
-    // Java
+>   // Java
     public void recur(int level, int param) { 
       // terminator 递归终结条件
       if (level > MAX_LEVEL) { 
@@ -19,6 +19,7 @@
       recur( level: level + 1, newParam); 
       // restore current status 清理这一层
     }
+
   思维要点
     1、不要人肉递归；
     2、找到最近最简方法，拆解成可重复解决子问题；
@@ -26,7 +27,7 @@
     
 分治
     分治代码模版
-    # Python
+>   # Python
     def divide_conquer(problem, param1, param2, ...): 
       # recursion terminator 终结递归
       if problem is None: 
