@@ -3,34 +3,36 @@
 本周学习深度优先搜索，广度优先搜索，贪心算法，二分查找
 
 深度优先搜索：
->   深度优先搜索递归写法
-    visited = set() 
-    def dfs(node, visited):
-        if node in visited: # terminator
-        	# already visited 
-        	return 
-    	visited.add(node) 
-    	# process current node here. 
-    	...
-    	for next_node in node.children(): 
-    		if next_node not in visited: 
-    			dfs(next_node, visited)
->   非递归写法
-    def DFS(self, tree): 
- 	if tree.root is None: 
- 		return [] 
- 	visited, stack = [], [tree.root]
- 	while stack: 
- 		node = stack.pop() 
- 		visited.add(node)
- 		process (node) 
- 		nodes = generate_related_nodes(node) 
- 		stack.push(nodes) 
- 	# other processing work 
- 	...
+   深度优先搜索递归写法
+   
+    >    visited = set() 
+         def dfs(node, visited):
+            if node in visited: # terminator
+                # already visited 
+                return 
+            visited.add(node) 
+            # process current node here. 
+            ...
+            for next_node in node.children(): 
+                if next_node not in visited: 
+                    dfs(next_node, visited)
+   非递归写法
+   
+    >   def DFS(self, tree): 
+        if tree.root is None: 
+            return [] 
+        visited, stack = [], [tree.root]
+        while stack: 
+            node = stack.pop() 
+            visited.add(node)
+            process (node) 
+            nodes = generate_related_nodes(node) 
+            stack.push(nodes) 
+        # other processing work 
+        ...
 
 广度优先搜索
->   广度优先搜索模版
+>   
     # Python
     def BFS(graph, start, end):
         visited = set()
@@ -60,7 +62,8 @@
     1、目前函数单调性（单调递增或递减）；
     2、存在上下界（bounded）；
     3、能够通过索引访问（index accessible）；
->   二分查找代码模版
+   二分查找代码模版
+>    
     # Python
     left, right = 0, len(array) - 1 
     while left <= right: 
